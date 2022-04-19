@@ -1,0 +1,36 @@
+function rgb(r, g, b){
+  
+  if(r > 255){
+    r = 255;
+  }
+  if(g > 255){
+    g = 255;
+  }
+  if(b > 255){
+    b = 255;
+  }
+  valor1 = r.toString(16).toUpperCase();
+  valor2 = g.toString(16).toUpperCase();
+  valor3 = b.toString(16).toUpperCase();
+  
+    if(valor1 < 0){
+      valor1 = "0";
+    }
+    if (valor1.length == 1){
+      valor1 = "0" + valor1;
+    }
+    if(valor2 < 0){
+      valor2 = "0";
+    }
+    if (valor2.length == 1){
+      valor2 = "0" + valor2;
+    }
+    if(valor3 < 0){
+      valor3 = "0";
+    }
+    if (valor3.length == 1){
+      valor3 = "0" + valor3;
+    }
+  
+  return valor1 + valor2 + valor3;
+}
