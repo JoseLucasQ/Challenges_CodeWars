@@ -1,0 +1,22 @@
+function humanReadable (seconds) {
+  
+  var hora = String(Math.floor(seconds / 3600));
+  
+  if (hora.length == 1){
+    hora = "0" + hora;
+  }
+  
+  var minuto = String(Math.floor(seconds / 60) % 60);
+  
+  if (minuto.length == 1){
+    minuto = "0" + minuto;
+  }
+  
+  var segundo = String(seconds % 60);
+  
+  if (segundo.length == 1){
+    segundo = "0" + segundo;
+  }
+  
+  return hora + ":" + minuto + ":" + segundo;
+}
